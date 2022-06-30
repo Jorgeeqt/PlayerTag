@@ -5,6 +5,9 @@ namespace jorgeeqt\task;
 use jorgeeqt\PlayerTag;
 use jorgeeqt\libs\jorgeeqt\CpsCounter;
 use jorgeeqt\libs\device\DeviceModel;
+use pocketmine\player\Player;
+use pocketmine\scheduler\Task;
+use pocketmine\Server;
 
 class PlayerTask extends Task {
   
