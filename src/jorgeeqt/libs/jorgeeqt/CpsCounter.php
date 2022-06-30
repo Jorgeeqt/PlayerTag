@@ -13,6 +13,7 @@ use pocketmine\network\mcpe\protocol\types\inventory\UseItemOnEntityTransactionD
 use pocketmine\network\mcpe\protocol\types\LevelSoundEvent;
 use pocketmine\network\mcpe\protocol\types\PlayerAction;
 use pocketmine\player\Player;
+use jorgeeqt\InstancePluginReference;
 use pocketmine\utils\TextFormat;
 
 use function array_unshift;
@@ -23,6 +24,8 @@ use function count;
 use function array_filter;
 
 class CpsCounter implements Listener{
+	
+    use InstancePluginReference;
 	
 	/** Library from Luca28pet **/
 	
