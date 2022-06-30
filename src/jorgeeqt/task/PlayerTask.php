@@ -24,7 +24,7 @@ class PlayerTask extends Task {
   }
   
   static public function createTag(){
-    foreach(Server::getInstance()->getOnlinePlayers as $player)
+    foreach(Server::getInstance()->getOnlinePlayers() as $player)
     {
       $cps = (int)PlayerTag::getInstance()->getCpsCounter()->getCps($player);
       $device = PlayerTag::getInstance()->getDeviceModel();
