@@ -6,6 +6,7 @@ use jorgeeqt\libs\device\DeviceModel;
 use jorgeeqt\libs\jorgeeqt\CpsCounter;
 use jorgeeqt\task\PlayerTask;
 use jorgeeqt\PlayerListener;
+use jorgeeqt\InstancePluginInterference;
 use pocketmine\Server;
 use pocketmine\player\Player;
 use pocketmine\plugin\PluginBase;
@@ -14,18 +15,6 @@ use pocketmine\utils\TextFormat;
 class PlayerTag extends PluginBase {
   
   private static PlayerTag $instance;
-  private DeviceModel $deviceModel;
-  private CpsCounter $cpsCounter;
-  
-  public function getCpsCounter(): CpsCounter
-  {
-    return $this->cpsCounter;
-  }
-  
-  public function getDeviceModel(): DeviceModel
-  {
-    return $this->deviceModel;
-  }
   
   static public function getInstance(): PlayerTag
   {
