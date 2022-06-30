@@ -13,8 +13,20 @@ use pocketmine\utils\TextFormat;
 class PlayerTag extends PluginBase {
   
   private static PlayerTag $instance;
+  private DeviceModel $deviceModel;
+  private CpsCounter $cpsCounter;
   
-  static public function getInstance(): self
+  public function getCpsCounter(): CpsCounter
+  {
+    return $this->cpsCounter;
+  }
+  
+  public function getDeviceModel(): DeviceModel
+  {
+    return $this->deviceModel;
+  }
+  
+  static public function getInstance(): PlayerTag
   {
     return self::$instance;
   }
@@ -30,6 +42,7 @@ class PlayerTag extends PluginBase {
     self::$instance = $this;
   }
   
+  /**
   public function replaceCaracters(Player $player, string $caracter): string 
   {
     $caracter = str_replace("{cps}", self::getInstance()->getCpsCounter()->getCps($player), $caracter);
@@ -37,6 +50,6 @@ class PlayerTag extends PluginBase {
     $caracter = str_replace("{health}", $player->getHealth(), $caracter);
     $caracter = str_replace("{device}", DeviceModel::getInstance()->getDeviceOS($player->getName(), $caracter);
     $caracter = str_replace("{control}", DeviceMode::getInstance()->getInput($player->getName(), $caracter);
-  }
+  }**/
 }
 ?>
