@@ -5,6 +5,7 @@ namespace jorgeeqt;
 use jorgeeqt\libs\device\DeviceModel;
 use jorgeeqt\libs\jorgeeqt\CpsCounter;
 use jorgeeqt\task\PlayerTask;
+use jorgeeqt\PlayerListener;
 use pocketmine\Server;
 use pocketmine\player\Player;
 use pocketmine\plugin\PluginBase;
@@ -39,6 +40,7 @@ class PlayerTag extends PluginBase {
   public function onEnable(): void 
   {
     $this->getLogger()->info("PlayerTag: Enabled Sussefully");
+    $this->getServer()->getPluginManager()->registerEvents(new PlayerListener($this, $this));
     self::$instance = $this;
   }
   
