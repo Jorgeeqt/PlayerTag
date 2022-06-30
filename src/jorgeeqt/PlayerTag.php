@@ -2,7 +2,6 @@
 
 namespace jorgeeqt;
 
-use jorgeeqt\event\PlayerListener;
 use jorgeeqt\libs\device\DeviceModel;
 use jorgeeqt\libs\jorgeeqt\CpsCounter;
 use jorgeeqt\task\PlayerTask;
